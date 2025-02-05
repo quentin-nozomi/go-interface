@@ -81,7 +81,7 @@ func consume3(howToPassThis *BigDoNotCopy2) { // good, enforced
 	fmt.Printf("reference: %p\n", howToPassThis)
 }
 
-func consume4(howToPass *BigDoNotCopy1) {
+func consume4(howToPass *BigDoNotCopy1) { // wrong
 	fmt.Printf("reference: %p\n", howToPass)
 }
 
@@ -113,6 +113,6 @@ func main() {
 	fmt.Printf("copy what: %p\n", &what2)
 	consume1(what2)
 
-	consume4(big2)
+	consume4(big2) // doesn't work
 }
 ```
